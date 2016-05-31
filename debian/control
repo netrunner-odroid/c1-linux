@@ -1,0 +1,14 @@
+Source: c1-linux
+Section: unknown
+Priority: optional
+Maintainer: Rohan Garg <rohan@kde.org>
+Build-Depends: debhelper (>=9), build-essential
+Standards-Version: 3.9.8
+Homepage: https://github.com/hardkernel/linux/tree/odroidc-3.10.y
+
+Package: c1-linux-image
+Architecture: armhf
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: kernel package for the ODROID C1
+ This package contains the nececssary kernel bits to boot
+ a ODROID C1
