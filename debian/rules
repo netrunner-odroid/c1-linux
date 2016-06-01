@@ -15,4 +15,4 @@ override_dh_auto_clean:
 	make clean
 
 override_dh_auto_install:
-	make modules_install INSTALL_MOD_PATH=debian/linux-odroidc/
+	make modules_install INSTALL_MOD_PATH=debian/c1-linux-image/
