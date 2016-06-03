@@ -15,4 +15,5 @@ override_dh_auto_clean:
 	make clean
 
 override_dh_auto_install:
+	INSTALL_PATH=debian/tmp/boot/ dh_auto_install
 	make INSTALL_MOD_PATH=debian/tmp/ INSTALL_MOD_STRIP=1 modules_install
