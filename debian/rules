@@ -3,18 +3,18 @@
 	dh $@ --parallel
 
 override_dh_auto_configure:
-	make odroidc_defconfig
+	$(MAKE) odroidc_defconfig
 	dh_auto_configure
 
 override_dh_auto_build:
 	dh_auto_build
-	make modules
-	make uImage
+	$(MAKE) modules
+	$(MAKE) uImage
 
 override_dh_auto_clean:
-	make clean
+	$(MAKE) clean
 
 override_dh_auto_install:
 	mkdir -p debian/tmp/boot/
 	INSTALL_PATH=debian/tmp/boot/ dh_auto_install
-	make INSTALL_MOD_PATH=debian/tmp/ INSTALL_MOD_STRIP=1 modules_install
+	$(MAKE) INSTALL_MOD_PATH=debian/tmp/ INSTALL_MOD_STRIP=1 modules_install
