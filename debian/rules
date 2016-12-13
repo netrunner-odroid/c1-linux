@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-export KCFLAGS="-fno-pie"
+export KCFLAGS += "-fno-pie"
 
 %:
 	dh $@ --parallel
