@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
 export DH_VERBOSE = 1
-export KCPPFLAGS += "-fno-pie"
+export KCPPFLAGS += -fno-pie
 
 %:
 	dh $@ --parallel
