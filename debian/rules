@@ -11,14 +11,14 @@ override_dh_auto_configure:
 	dh_auto_configure
 
 override_dh_auto_build:
-	VERBOSE=1 dh_auto_build
-	$(MAKE) VERBOSE=1 modules
-	$(MAKE) VERBOSE=1 uImage
+	dh_auto_build -- V=1
+	$(MAKE) V=1 modules
+	$(MAKE) V=1 uImage
 
 override_dh_auto_clean:
 	$(MAKE) clean
 
 override_dh_auto_install:
 	mkdir -p debian/tmp/boot/
-	VERBOSE=1 INSTALL_PATH=debian/tmp/boot/ dh_auto_install
-	$(MAKE) VERBOSE=1 INSTALL_MOD_PATH=debian/tmp/ INSTALL_MOD_STRIP=1 modules_install
+	INSTALL_PATH=debian/tmp/boot/ dh_auto_install
+	$(MAKE) V=1 INSTALL_MOD_PATH=debian/tmp/ INSTALL_MOD_STRIP=1 modules_install
