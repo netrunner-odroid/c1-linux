@@ -3,8 +3,8 @@
 export DH_VERBOSE = 1
 export KCPPFLAGS += -fno-pie
 export ARCH=arm
-export CC=gcc-7
-export CXX=g++-7
+export CC=gcc-8
+export CXX=g++-8
 
 %:
 	dh $@ --parallel
