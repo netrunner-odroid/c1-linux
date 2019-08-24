@@ -2,7 +2,7 @@ Source: c1-linux
 Section: unknown
 Priority: optional
 Maintainer: Rohan Garg <rohan@kde.org>
-Build-Depends: bc, build-essential, debhelper (>=9), gcc-7, lzop, u-boot-tools
+Build-Depends: bc, build-essential, debhelper (>=9), gcc-7, lzop, u-boot-tools, mtools
 Standards-Version: 3.9.8
 Homepage: https://github.com/hardkernel/linux/tree/odroidc-3.10.y
 
