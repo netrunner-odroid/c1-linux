@@ -14,9 +14,9 @@ override_dh_auto_configure:
 	dh_auto_configure
 
 override_dh_auto_build:
-	dh_auto_build -- -j1 V=1
-	$(MAKE) -j1 V=1 modules
-	$(MAKE) -j1 V=1 uImage
+	dh_auto_build -- V=1
+	$(MAKE) V=1 modules
+	$(MAKE) V=1 uImage
 
 override_dh_auto_clean:
 	$(MAKE) clean
